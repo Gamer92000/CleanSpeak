@@ -1,0 +1,75 @@
+{
+  "name": "CleanSpeak",
+  "description": "Dark Theme by Gamer92000",
+  "version": "1.0.0",
+  "identifier": "de.julianimhof.cleanspeak",
+  "engines": {
+    "teamspeak": 1
+  },
+	"homepage": "https://community.teamspeak.com/t/skin-cleanspeak-a-the-all-new-teamspeak-5-theme/20168",
+  "docsUrl": "https://community.teamspeak.com/t/skin-cleanspeak-a-the-all-new-teamspeak-5-theme/20168",
+	"repository": {
+		"url": "https://github.com/Gamer92000/CleanSpeak",
+		"type": "git",
+    "directory": "Theme"
+	},
+  "image": "CLEANSPEAK.png",
+  "license": "MIT",
+  "author": {
+    "name": "Gamer92000",
+    "email": "teamspeak@julianimhof.de",
+    "url": "https://julianimhof.de",
+    "userTag": "Gamer92000@myteamspeak.com"
+  },
+  "community": {
+    "room": "#addons:tschat-1.teamspeak.com",
+    "server": "julianimhof.de"
+  },
+  "content": {
+    "themes": [
+      {
+        "name": "CleanSpeak",
+        "source": "Gamer92000.css",
+        "apiVersion": 1,
+        "image": "default1.png"
+      },
+      {
+        "name": "​CleanSpeak RED",
+        "source": "ImScheinox.css",
+        "apiVersion": 1,
+        "image": "red1.png"
+      },
+      {
+        "name": "​​CleanSpeak GREEN",
+        "source": "ImY.css",
+        "apiVersion": 1,
+        "image": "green1.png"
+      },
+      {
+        "name": "​​​CleanSpeak BLUE",
+        "source": "Blue.css",
+        "apiVersion": 1,
+        "image": "blue1.png"
+      },
+      {
+        "name": "​​​​CleanSpeak PURPLE",
+        "source": "Purple.css",
+        "apiVersion": 1,
+        "image": "purple1.png"
+      },
+      {
+        "name": "​​​​​CleanSpeak PINK",
+        "source": "Pink.css",
+        "apiVersion": 1,
+        "image": "pink1.png"
+      },
+      {
+        "name": "​​​​​​xX_CleanSpeak_XxHDTV",
+        "source": "Gamer.css",
+        "apiVersion": 1,
+        "image": "gamer1.png"
+      }
+
+    ]
+  }
+}

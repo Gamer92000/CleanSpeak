@@ -1,0 +1,157 @@
+:icons: font
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:warning-caption: :warning:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :information_source:
+endif::[]
+
+
+ifdef::env-github[]
+:imagesdir: https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/
+endif::[]
+
+---
+⠀
+ifdef::env-github[]
+++++
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/Resources/TITLE.png">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::Resources\TITLE.png[Colorful TeamSpeak Theme, align=center]
+endif::[]
+⠀
+
+---
+
+== This theme…
+
+* changes the accent color of TeamSpeak to the selected one.
+
+* disables the chat bubbles of messages.
++
+image:Resources\Chat.png[No Bubbles in Chat]
+
+* redesigns the favorite contact view
++
+image:Resources\Star.png[Favorite Star in Contact List]
+
+* centers channel banners
++
+image:Resources\Banner.png[Centered Banners]
+
+* and a lot more!
+
+---
+
+image:Resources\CLEAN.png[Default]
+image:Resources\default1.png[Default]
+
+---
+
+image:Resources\RED.png[Default]
+image:Resources\red1.png[Default]
+
+---
+
+image:Resources\GREEN.png[Default]
+image:Resources\green1.png[Default]
+
+---
+
+image:Resources\BLUE.png[Default]
+image:Resources\blue1.png[Default]
+
+---
+
+image:Resources\PURPLE.png[Default]
+image:Resources\purple1.png[Default]
+
+---
+
+image:Resources\PINK.png[Default]
+image:Resources\pink1.png[Default]
+
+---
+
+image:Resources\GAMER.png[Default]
+image:Resources\pride1.png[Default]
+
+---
+
+⠀
+ifdef::env-github[]
+++++
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/Resources/Download.png">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::Resources\Download.png[Download and Installation, align=center]
+endif::[]
+
+⠀
+
+== Automatic Installation  (Windows and Linux only)
+
+ * Download the https://github.com/Gamer92000/CleanSpeak/releases/latest/download/CleanSpeak.exe[**Windows**] or https://github.com/Gamer92000/CleanSpeak/releases/latest/download/CleanSpeak[**Linux**] Installer and execute it.
+
+WARNING: For Linux it might be necessary to run ``chomod +x ./CleanSpeak`` to make it executable.
+
+ * Go trough the "Installation" process.
+
+ * Restart or open TeamSpeak.
+
+ * Go into the `Settings -> Apperance -> User Theme` and here you can select the theme typ you want to use.
+
+NOTE: If the Installation does not work please try the Manual Installation!
+
+== Manual Installation
+
+ * Download the https://github.com/Gamer92000/CleanSpeak/releases/latest/download/de.julianimhof.cleanspeak.zip[**Theme**], unzip and move it into the Extentions folder:
+
+[cols="1,3a"]
+|===
+|Windows| ``%appdata%\TeamSpeak\Default\extensions``
+|Linux| ``~/.config/TeamSpeak/Default/extensions``
+|Mac| ``~/Library/Preferences/TeamSpeak/Default/extensions``
+|===
+
+ * Restart or open TeamSpeak.
+
+ * Go into the `Settings -> Apperance -> User Theme` and here you can select the theme typ you want to use.
+
+NOTE: Default stands for you Profile and might be different in your TeamSpeak Installation!
+⠀
+
+---
+
+⠀
+ifdef::env-github[]
+++++
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/Resources/Credis.png">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::Resources\Credits.png[Credits, align=center]
+endif::[]
+
+⠀
+
+Special thanks to all my testers https://community.teamspeak.com/u/imscheinox[@ImScheinox], https://community.teamspeak.com/u/dodo.reh[@DODO.REH], https://community.teamspeak.com/u/leonmarcelhd[@LeonMarcelHD] and https://community.teamspeak.com/u/syox[@SYOX].
+
+And especially to https://community.teamspeak.com/u/cobra[@Cobra] for implementing the official theming engine!
+
+
+---

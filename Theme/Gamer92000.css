@@ -1,0 +1,749 @@
+:root { /* custom value*/
+    /* accent color in hsl used to compute shades automatically */
+    /* default: 36, 94%, 48% */
+    --hue: 36;
+    --saturation: 94%;
+    --lightness: 48%;
+}
+
+:root { /* theme custom values */
+    --lightness-dark: calc(var(--lightness) - 8%);
+    --lightness-really-dark: calc(var(--lightness) - 30%);
+    --custom-color-light-grey: #353844;
+    --custom-color-dark-grey: #252A33;
+    --custom-color-accent-light: hsl(var(--hue), var(--saturation), var(--lightness));
+    --custom-color-accent-dark: hsl(var(--hue), var(--saturation), var(--lightness-dark));
+    --custom-color-accent-really-dark: hsl(var(--hue), var(--saturation), var(--lightness-really-dark));
+    --custom-color-off-white: #e0e0e0;
+    --custom-color-secondary-text: #bebebe;
+    --custom-value-scrollbar-width: 3px;
+    --custom-value-font: 'Roboto Condensed', sans-serif;
+    --custom-value-font-weight: 300;
+    --custom-color-chat-bubble-code: #141922;
+    --custom-color-channel-commander-light: rgb(255, 205, 29);
+    --custom-color-channel-commander-dark: #8d7007;
+}
+
+:root { /* override everywhere (bad practice ) */
+    --tsv-icon-tint: var(--custom-color-accent-light) !important;
+    --tsv-icon-tint2: var(--custom-color-accent-light) !important;
+    --tsv-tint: var(--custom-color-accent-light) !important;
+    --tsv-tint2: var(--custom-color-accent-light) !important;
+    --tsv-separation-border: none !important;
+    --tsv-control-handle-active-bg: var(--custom-color-accent-light) !important;
+    --tsv-button-bg: var(--custom-color-accent-dark) !important;
+    --tsv-button-hover-bg: var(--custom-color-accent-light) !important;
+    --ts-menu-action-color: var(--custom-color-accent-dark) !important;
+    --tsv-icon-folder: var(--custom-color-accent-light) !important;
+    --tsv-chat-remote-bg: transparent !important;
+    --tsv-chat-self-bg: transparent !important;
+    --tsv-chat-deleted-bg: transparent !important;
+    --tsv-chat-remote-font-color: var(--custom-color-off-white) !important;
+    --tsv-chat-self-font-color: var(--custom-color-off-white) !important;
+    --tsv-chat-deleted-font-color: rgba(255, 130, 130, 0.25) !important;
+    --tsv-chat-link-color: var(--custom-color-accent-light) !important;
+    --ts-chat-system-highlight-text-color: var(--custom-color-accent-light) !important;
+    --tsv-content-branding-fancy-bg: var(--tsv-content-branding-bg) !important;
+    --tsv-highlight-color: var(--custom-color-accent-light) !important;
+}
+
+.tsv-icon-teamspeak-logo {
+    display: none;
+}
+
+.ts-loading-view-content::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: center/contain url("TS_fancy.png");
+}
+
+.tsv-body-background {
+    --tsv-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-room-event-detailed {
+    --tsv-padding-v: 2px;
+}
+
+.tsv-sidebar-header-accessories {
+    --tsv-icon-base: var(--custom-color-accent-light) !important;
+}
+
+#ts-app-loading-overlay {
+    background-color: var(--custom-color-dark-grey) !important;
+}
+
+.tsv-highlight.tsv-header:before {
+    display: none;
+}
+
+.tsv-highlight.tsv-header {
+    --tsv-highlight-header-honeycomb-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-sidebar > .tsv-body.tsv-body-background.tsv-sidebar-content {
+    --tsv-shaded-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-sidebar .tsv-footer {
+    --tsv-shaded-footer-bg: var(--custom-color-dark-grey) !important;
+    border-top: 1px solid var(--custom-color-accent-light) !important;
+}
+
+.tsv-bar.tsv-tabs {
+    gap: 5px;
+}
+
+.tsv-bar.tsv-tabs::before {
+    content: none !important;
+    --tsv-contrast-bg: var(--custom-color-light-grey) !important;
+}
+
+.tsv-tab-item::before {
+    content: none !important;
+}
+
+.tsv-tab-item {
+    background: var(--custom-color-dark-grey) !important;
+    border: 2px solid var(--custom-color-light-grey);
+    border-radius: 4px !important;
+}
+
+.tsv-tab-item-active {
+    width: 100% !important;
+}
+
+.tsv-search-bar {
+    --tsv-contrast-bg: var(--custom-color-light-grey) !important;
+}
+
+.tsv-search-input {
+    --tsv-shaded-bg: var(--custom-color-dark-grey) !important;
+}
+
+.tsv-sidebar .tsv-item-highlight {
+    --tsv-shaded-item-selection: var(--custom-color-light-grey);
+    --tsv-item-selection: var(--custom-color-dark-grey);
+}
+
+.tsv-tab-item:hover .tsv-action .tsv-magnify:not(svg) {
+    transform: scale(1.2);
+}
+
+.tsv-sidebar-header-accessories.background {
+    --tsv-bg: var(--custom-color-light-grey) !important;
+}
+
+.bookmarks:not(.tsv-sidebar-tab-header + .bookmarks) {
+    padding-top: 10px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+::-webkit-scrollbar {
+    width: var(--custom-value-scrollbar-width) !important;
+	height: var(--custom-value-scrollbar-width) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--custom-color-accent-light) !important;
+}
+
+/* activities triangle */
+.tsv-item-active-indicator {
+    right: calc(var(--custom-value-scrollbar-width) - var(--tsv-separation-border-width)) !important;
+}
+
+.tsv-item-active-indicator::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: inherit !important;
+    left: -2px !important;
+    top: -6px !important;
+    border: 6px solid transparent !important;
+    border-right-color: var(--tsv-bg) !important;
+}
+
+/* favorite star */
+.tsv-icon-contact-status-favorite, .tsv-icon-chat-room-status-favorite {
+    z-index: 10;
+    left: 13px !important;
+    top: 4px !important;
+    stroke: rgba(0,0,0,.7);
+    stroke-width: 1.3px;
+    transform: scale(.61);
+}
+
+.tsv-view-banner :is(.tsv-icon-contact-status-favorite, .tsv-icon-chat-room-status-favorite) {
+    transform: scale(.4);
+    left: 30px !important;
+    top: 15px !important;
+}
+
+.tsv-icon-contact-status-favorite rect, .tsv-icon-chat-room-status-favorite rect {
+    display: none;
+}
+
+.tsv-icon-contact-status-favorite path, .tsv-icon-chat-room-status-favorite path {
+    /* d: path('M19.4,13.5 21.4,17.6 25.9,18.2 22.7,21.4 23.4,25.9 19.4,23.8 15.4,25.9 16.2,21.4 12.9,18.2 17.4,17.6z') !important; */
+    d: path('m 11.566084,-4e-7 3.002256,8.02905 8.563828,0.3742 L 16.423837,13.73968 18.714317,22 11.566084,17.26904 4.4178507,22 6.7083312,13.73968 0,8.4032496 l 8.5638277,-0.3742 z') !important;
+    fill: var(--custom-color-accent-light);
+}
+
+.tsv-header.tsv-header-floating::before {
+    content: none !important;
+}
+
+.tsv-floating-background {
+    backdrop-filter: inherit !important;
+    background-color: var(--custom-color-dark-grey) !important;
+}
+
+.ts-server-tree-wrapper {
+    background-color: var(--custom-color-light-grey);
+}
+
+.tsv-footer {
+    --tsv-footer-bg: var(--custom-color-dark-grey) !important;
+}
+
+.ts-server-tree-item-background-image img, .ts-server-tree-item-background-image-full img {
+    left: 50% !important;
+    transform: translate(-50%, 0);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0px, #000 var(--tsv-padding-h-large), #000 calc(100% - var(--tsv-padding-h-large)), transparent);
+}
+
+.ts-server-tree-item-root {
+    --tsv-shaded-bg: var(--custom-color-dark-grey) !important;
+    --tsv-item-selection: var(--custom-color-dark-grey) !important;
+}
+
+.ts-create-channel-menu .ts-widget {
+    --tsv-shaded-bg: var(--custom-color-dark-grey) !important;
+}
+
+.ts-create-channel-menu .tsv-item-highlight {
+    --tsv-item-selection: var(--custom-color-dark-grey) !important;
+}
+
+.tsv-activity-detail .tsv-body {
+    --tsv-shaded-bg: var(--custom-color-dark-grey) !important;
+}
+
+.tsv-activity-detail .tsv-navigation-bar {
+    --tsv-bg: var(--custom-color-light-grey) !important;
+}
+
+.tsv-server-info-grid-left, .tsv-server-info-grid-item {
+    --tsv-bg: var(--custom-color-light-grey) !important;
+}
+
+.tsv-server-info-default-banner {
+    background: var(--custom-color-light-grey);
+    opacity: 1;
+}
+
+.tsv-activity-detail .ts-widget-section-header .title::before {
+    content: none;
+}
+
+.tsv-activity-detail .ts-widget-section-header .title {
+    border: 2px solid var(--custom-color-light-grey);
+    border-radius: 4px !important;
+}
+
+.tsv-activity-detail .ts-card {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.tsv-activity-detail .tsv-item-highlight {
+    --tsv-shaded-item-selection: var(--custom-color-dark-grey);
+}
+
+.tsv-activity-detail .ts-simple-card {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.ts-server-logs-list {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.ts-server-log-search input {
+    --tsv-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-activity-detail .multiselect__tags {
+    --ts-select-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-activity-detail .multiselect__content-wrapper {
+    --ts-select-bg: var(--custom-color-dark-grey) !important;
+    /* --ts-select-bg: var(--custom-color-accent-really-dark); */
+    --ts-select-option-highlight-bg: var(--custom-color-accent-really-dark);
+    --ts-select-option-selected-highlight-bg: var(--custom-color-accent-dark) !important;
+}
+
+.multiselect--active .multiselect__select {
+    transform: translate(0, -50%) rotateX(180deg) !important;
+}
+
+.multiselect__select {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.multiselect__select::before{
+    right: inherit;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-80%, -50%);
+    border-top: var(--ts-select-arrow-size) solid var(--custom-color-accent-light);
+}
+
+.tsv-activity-detail .ts-text-input-box-inner input {
+    --tsv-bg: var(--custom-color-dark-grey);
+}
+
+.ts-checkbox-checkmark-path {
+    stroke: var(--custom-color-accent-light) !important;
+}
+
+div:not(.channel-commander) > div > .tsv-icon-client-talking circle {
+    fill: var(--custom-color-accent-light) !important;
+}
+
+div:not(.channel-commander) > div > .tsv-icon-client-normal circle, div:not(.channel-commander) > div > .tsv-icon-client-voiceless circle {
+    fill: var(--custom-color-accent-really-dark) !important;
+}
+
+div.channel-commander > div > .tsv-icon-client-talking circle {
+    fill: var(--custom-color-channel-commander-light) !important;
+}
+
+div.channel-commander > div > :is(.tsv-icon-client-normal, .tsv-icon-client-voiceless) circle {
+    fill: var(--custom-color-channel-commander-dark) !important;
+}
+
+div.channel-commander ellipse {
+    --tsv-icon-tint: var(--custom-color-channel-commander-dark) !important;
+}
+
+.tsv-activity-detail .tsv-number-picker-button {
+    --tsv-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-activity-detail .tsv-segmented-control {
+    --tsv-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-input-container {
+    background: var(--custom-color-light-grey) !important;
+    border: none !important;
+}
+
+.ts-chat-input-container-content {
+    --tsv-bg: var(--custom-color-light-grey);
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.tsv-activity-primary .ts-chat-input-container {
+    background: var(--custom-color-dark-grey) !important;
+}
+
+.tsv-activity-primary .ts-chat-input-container-content {
+    --tsv-bg: var(--custom-color-dark-grey);
+    --tsv-shaded-bg: var(--custom-color-dark-grey);
+}
+
+.ts-chat-input-container:is(:hover, .focus)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1px var(--custom-color-accent-light);
+    pointer-events: none;
+    z-index: 20;
+    border-radius: var(--tsv-border-radius);
+}
+
+.ts-server-tree-item-root {
+    --tsv-footer-bg: var(--custom-color-light-grey);
+}
+
+.ts-activity-slideover-container .tsv-header::before {
+    --tsv-unrelated-activity-header-bg: var(--custom-color-light-grey) !important;
+    --tsv-header-bg: var(--custom-color-light-grey) !important;
+}
+
+.ts-activity-slideover-container .tsv-body-background {
+    --tsv-bg: var(--custom-color-dark-grey);
+}
+
+.room-users-title {
+    top: 1px !important;
+}
+
+.ts-activity-slideover-container .ts-card {
+    --tsv-shaded-bg: var(--custom-color-light-grey) !important;
+}
+
+.tsv-activity-primary .ts-card {
+    --tsv-shaded-bg: var(--custom-color-dark-grey) !important;
+}
+
+:is(.ts-activity-slideover-container, .tsv-activity-primary) .ts-widget-section-header .title::before {
+    content: none;
+}
+
+.ts-activity-slideover-container .ts-widget-section-header .title::after {
+    border: 2px solid var(--custom-color-light-grey);
+    background: var(--custom-color-dark-grey);
+}
+
+.tsv-activity-primary .ts-widget-section-header .title::after {
+    border: 2px solid var(--custom-color-dark-grey);
+    background: var(--custom-color-light-grey);
+}
+
+.ts-activity-slideover-container .tsv-view-background {
+    background: var(--custom-color-light-grey) !important;
+    opacity: 1;
+}
+.tsv-activity-primary .tsv-view-background {
+    background: var(--custom-color-dark-grey) !important;
+    opacity: 1;
+}
+
+:is(.ts-whisper-settings, .ts-about-settings, .ts-privacy-settings-view, .ts-identities-root, .ts-notifications-root, .ts-keybinds-settings, .ts-audio-settings, .ts-appearance-settings, .ts-account-settings-view) {
+    --ts-select-bg: var(--custom-color-light-grey);
+    --ts-select-option-highlight-bg: var(--custom-color-dark-grey);
+}
+
+:is(.ts-whisper-settings, .ts-about-settings, .ts-privacy-settings-view, .ts-identities-root, .ts-notifications-root, .ts-keybinds-settings, .ts-audio-settings, .ts-appearance-settings, .ts-account-settings-view) .title::before {
+    content: none;
+}
+
+:is(.ts-whisper-settings, .ts-about-settings, .ts-privacy-settings-view, .ts-identities-root, .ts-notifications-root, .ts-keybinds-settings, .ts-audio-settings, .ts-appearance-settings, .ts-account-settings-view) .title::after {
+    border: 2px solid var(--custom-color-dark-grey);
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+:is(.ts-whisper-settings, .ts-about-settings, .ts-privacy-settings-view, .ts-identities-root, .ts-notifications-root, .ts-keybinds-settings, .ts-audio-settings, .ts-appearance-settings, .ts-account-settings-view) .ts-card {
+    --tsv-shaded-bg: var(--custom-color-dark-grey);
+}
+
+.ts-about-settings .tsv-dashboard-widget {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-about-settings .tsv-dashboard-widget-content {
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-message-attachment-inner {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.tsv-activity-primary .ts-chat-message-attachment-inner {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-chat-input-top-section {
+    background: var(--tsv-bg);
+}
+
+.tsv-dashboard-changelog .tsv-dashboard-widget {
+    background: none;
+}
+
+.tsv-dashboard-changelog .tsv-dashboard-widget-content {
+    background: var(--custom-color-light-grey);
+    border: 2px solid var(--custom-color-dark-grey);
+}
+
+.tsv-header-bar-below-tools::before {
+    content: none;
+}
+
+.tsv-header-bar-below-tools {
+    --tsv-shaded-item-selection: var(--custom-color-light-grey);
+}
+
+.ts-chat-message-attachment-myts-file {
+    background: inherit !important;
+}
+
+.tsv-chat-room-info-buttons .tsv-button-filled {
+    --tsv-icon-base: var(--custom-color-accent-really-dark);
+}
+
+:is(.ts-parsed-text-content, .ts-parsed-text-content) code {
+    background: var(--custom-color-chat-bubble-code) !important;
+}
+
+.tsv-dashboard-grid .ts-widget-section-header .title:before {
+    content: none;
+}
+
+.tsv-dashboard-grid .ts-widget-section-header .title:after {
+    border: 2px solid var(--custom-color-dark-grey);
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.tsv-dashboard-grid .tsv-dashboard-widget {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-dashboard-grid .tsv-dashboard-widget-content {
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+    --tsv-shaded-item-selection: var(--custom-color-dark-grey);
+}
+
+.ts-discovery-card .ts-discovery-header {
+    background: var(--custom-color-dark-grey) !important;
+}
+
+.ts-discovery-card .ts-discovery-header::before {
+    background: var(--custom-color-accent-light) !important;
+}
+
+.ts-chat-room-event-detailed .ts-chat-message-header {
+    margin-bottom: 0;
+    margin-top: calc(2 * var(--tsv-padding-v-small));
+}
+
+:is(.ts-chat-room-event-detailed, .ts-chat-room-event-compact) :is(.ts-chat-message-status, .ts-chat-message-status-detailed) path {
+    stroke: var(--custom-color-accent-light) !important;
+}
+
+.ts-chat-message-attachment .ts-chat-message-attachment-inner .ts-chat-message-attachment-image .backing.color-only {
+    --tsv-shaded-bg: var(--custom-color-dark-grey);
+}
+
+.ts-lightbox-content-basis {
+    background: var(--custom-color-chat-bubble-code) !important;
+}
+
+.ts-lightbox-content-platter {
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.ts-info-files-channel {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-room-event-detailed .ts-chat-room-event-bubble.self-mention {
+    background: transparent;
+}
+
+.ts-chat-room-event-detailed .ts-chat-room-event-bubble.self-mention::before {
+    content: none;
+}
+
+.ts-chat-room-event-bubble.self-mention {
+    color: var(--tsv-chat-mention-bg);
+}
+
+.ts-server-tree-item-groups span:is(.before, .after) {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-graph-layer-background, .ts-server-events-list, .ts-connection-info-property {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+.tooltip .tooltip-inner {
+    --tsv-contrast-bg: var(--custom-color-chat-bubble-code);
+}
+
+.ts-server-tree-item-leaf .ts-server-tree-item-text.banner {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-server-tree-item-background-no-image, .ts-server-tree-item-background-image-full.loading, .ts-server-tree-item-background-image.loading, .ts-server-tree-item-background-no-image.loading {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.tsv-item-highlight {
+    background: rgb(37, 42, 51, .7);
+}
+
+.ts-context-menu, .ts-false-context-menu {
+    background: rgba(20, 25, 34, .7);
+}
+
+.ts-server-events-title svg[name="window-maximize"] path {
+    d: path('M 13.256607,6.1150775 C 13.667109,6.1150775 14,5.7822355 14,5.3716844 V 2.7433931 C 14,2.3328419 13.667109,2 13.256607,2 h -2.62829 c -0.410552,0 -0.7433938,0.3328419 -0.7433938,0.7433931 0,0.4105513 0.3328418,0.7433932 0.7433938,0.7433932 h 0.83359 L 7.9999755,6.9487185 4.5380928,3.4867863 h 0.8335915 c 0.4105512,0 0.7433932,-0.3328419 0.7433932,-0.7433932 C 6.1150775,2.3328419 5.7822355,2 5.3716843,2 H 2.7433932 C 2.3328915,2 2,2.3328419 2,2.7433931 v 2.6282913 c 0,0.4105511 0.3328915,0.7433931 0.7433932,0.7433931 0.4106007,0 0.7433931,-0.332842 0.7433931,-0.7433931 V 4.5380928 L 6.9487185,8.000025 3.4867863,11.461907 v -0.83359 c 0,-0.410552 -0.3327924,-0.743394 -0.7433931,-0.743394 C 2.3328915,9.884923 2,10.217765 2,10.628317 v 2.62829 C 2,13.667159 2.3328915,14 2.7433932,14 h 2.6282911 c 0.4105512,0 0.7433932,-0.332841 0.7433932,-0.743393 0,-0.410551 -0.332842,-0.743392 -0.7433932,-0.743392 H 4.5380928 l 3.4619323,-3.461933 3.4619319,3.461933 h -0.83364 c -0.410552,0 -0.7433938,0.332841 -0.7433938,0.743392 C 9.8849232,13.667159 10.217765,14 10.628317,14 h 2.62829 C 13.667109,14 14,13.667159 14,13.256607 v -2.62829 c 0,-0.410552 -0.332891,-0.743394 -0.743393,-0.743394 -0.4106,0 -0.743392,0.332842 -0.743392,0.743394 v 0.83359 L 9.0512818,7.9999755 12.513215,4.5380433 v 0.8335915 c 0,0.4106007 0.332792,0.7434427 0.743392,0.7434427 z') !important;
+}
+
+.tschat-user-tag path {
+    stroke: var(--custom-color-accent-light) !important;
+}
+
+.ts-discovery-card {
+    --tsv-shaded-header-bg: var(--custom-color-dark-grey);
+}
+
+.ts-discovery-header {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-sidebar-card, .tsv-sidebar-content .ts-card {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+    --tsv-bg: var(--custom-color-dark-grey);
+    --ts-select-bg: var(--custom-color-dark-grey);
+    --ts-select-option-highlight-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-type-preview {
+    --tsv-shaded-bg: var(--custom-color-dark-grey);
+}
+
+.ts-chat-input-emoji-picker, .ts-chat-input-tab.active {
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.ts-chat-input-tabs {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-emoji-picker .ts-emoji-picker-anchors .ts-emoji-picker-anchor.ts-emoji-picker-anchor-selected, .ts-emoji-picker .ts-emoji-picker-anchors .ts-emoji-picker-anchor:hover {
+    border-bottom-color: var(--custom-color-accent-light);
+    color: var(--custom-color-accent-light) !important;
+}
+
+.tsv-button-hero  {
+    background: linear-gradient(-45deg, var(--custom-color-accent-light) 1%, var(--custom-color-accent-dark)) !important;
+    border: .5px solid var(--custom-color-accent-light) !important;
+    box-shadow: 0 0 0 var(--custom-color-accent-light);
+}
+
+.tsv-button-hero:not(.disabled) {
+    animation: customPulse 2s infinite !important;
+}
+
+@keyframes customPulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 var(--custom-color-accent-light);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgb(37 221 133 / 0%);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgb(37 221 133 / 0%);
+    }
+}
+
+.ts-notification:before {
+    background: var(--custom-color-dark-grey);
+}
+
+.ts-chat-message-system-body {
+    --ts-chat-system-message-color: var(--custom-color-dark-grey);
+}
+
+.ts-analytics-privacy-mode {
+    --tsv-contrast-bg: var(--custom-color-light-grey);
+}
+
+select option:checked {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-vad-bar-overlay {
+	background: initial !important;
+}
+
+.ts-slider-track {
+	border-radius: 5px !important;
+}
+
+.ts-slider .ts-slider-track .ts-slider-knob .ts-slider-knob-bubble {
+    white-space: nowrap;
+}
+
+.ts-slider-track[style] {
+    background: linear-gradient(90deg, var(--custom-color-accent-light), var(--custom-color-accent-dark));
+}
+
+.ts-slider:not(.ts-slider-compact) .ts-slider-segment::after {
+	content: "";
+	position: absolute;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	top: -2px;
+	left: -2px;
+	border-radius: 5px;
+	border: 2px solid var(--custom-color-light-grey);
+}
+
+.ts-slider:not(.ts-slider-compact) .ts-slider-segment {
+    border-radius: 0;
+    margin: 0px !important;
+    border: 2px solid var(--custom-color-light-grey);
+}
+
+.ts-slider-compact .ts-slider-segment {
+	border-radius: 0;
+	margin: 0px !important;
+	--border: 2px solid var(--custom-color-light-grey);
+	border-bottom: var(--border);
+	border-top: var(--border);
+}
+
+.ts-slider-compact .ts-slider-segment:first-child {
+	border-left: var(--border);
+}
+
+.ts-slider-compact .ts-slider-segment:last-child {
+	border-right: var(--border);
+}
+
+.ts-slider-segment:first-child {
+	border-top-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+}
+
+.ts-slider-segment:last-child {
+	border-top-right-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+}
+.ts-slider-segment-value {
+    border-radius: 0px !important;
+}
+
+.ts-slider-segment-value.ts-slider-segment-value-off {
+    background: var(--custom-color-light-grey) !important;
+    transform: scale(1);
+    opacity: .8;
+    border: 2px solid transparent;
+}
+
+.ts-slider-segment-value.ts-slider-segment-value-on {
+    background: transparent !important;
+}
+
+.ts-identity-bookmark {
+    --tsv-contrast-bg: var(--custom-color-dark-grey);
+}
+
+.ts-notifications-center {
+    --tsv-shaded-bg: var(--custom-color-light-grey);
+}
+
+.ts-server-tree-item-tag {
+     text-shadow: none;
+}
+
+.ts-expander.collapsed:not(:hover) .ts-expander-chevron {
+    --tsv-icon-base: rgb(105, 122, 151);
+}

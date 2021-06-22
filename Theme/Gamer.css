@@ -1,0 +1,22 @@
+@import url(Gamer92000.css);
+
+@property --cnt {
+  syntax: '<integer>'; /* <- defined as type number for the transition to work */
+  initial-value: 0;
+  inherits: false;
+}
+
+:root {
+	--cnt: 0;
+	--hue: calc(var(--cnt) * 10);
+    --saturation: 100%;
+    --lightness: 50%;
+	animation: color 36s infinite;
+}
+
+@keyframes color {
+  0% {--cnt: 0;}
+  /*2% {--hue: 10;}*/
+  /*98% {--hue: 340;}*/
+  100% {--cnt: 35;}
+}
