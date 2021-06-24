@@ -138,7 +138,7 @@ NOTE: Default stands for you Profile and might be different in your TeamSpeak In
 ifdef::env-github[]
 ++++
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/Resources/Credis.png">
+  <img src="https://raw.githubusercontent.com/Gamer92000/CleanSpeak/main/Resources/Credits.png">
 </p>
 ++++
 endif::[]
