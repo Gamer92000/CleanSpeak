@@ -151,7 +151,7 @@ endif::[]
 
 Special thanks to all my testers https://community.teamspeak.com/u/imscheinox[@ImScheinox], https://community.teamspeak.com/u/dodo.reh[@DODO.REH], https://community.teamspeak.com/u/leonmarcelhd[@LeonMarcelHD] and https://community.teamspeak.com/u/syox[@SYOX].
 
-And especially to https://community.teamspeak.com/u/cobra[@Cobra] for implementing the official theming engine!
+And especially to everyone at https://teamspeak.com[TeamSpeak] for implementing the official theming engine!
 
 
 ---
