@@ -45,10 +45,148 @@
     --ts-chat-system-highlight-text-color: var(--custom-color-accent-light) !important;
     --tsv-content-branding-fancy-bg: var(--tsv-content-branding-bg) !important;
     --tsv-highlight-color: var(--custom-color-accent-light) !important;
+    --tsv-bg: var(--custom-color-dark-grey) !important;
+
+    /* fix light mode */
+    --ts-chat-mention-bg-opacity: 0.2 !important;
+    --ts-chat-system-message-color: #131824 !important;
+    --ts-chat-system-secured-text-color: #3dda8b !important;
+    --ts-client-commander-voiceless-gradient-start: #5e492e !important;
+    --ts-client-commander-voiceless-gradient-stop: #3a2e20 !important;
+    --ts-context-menu-background: rgba(20, 23, 32, 0.85) !important;
+    --ts-context-menu-font-color: var(--tsv-font-color) !important;
+    --ts-context-menu-icon-tint-color: var(--tsv-tint) !important;
+    --tsv-accept-color: #13F78D !important;
+    --tsv-accept-light-color: rgb(184, 255, 211) !important;
+    --tsv-away-color: #FD6E35 !important;
+    --tsv-bar-bg: var(--tsv-shaded-bg) !important;
+    --tsv-button-warning-bg: linear-gradient(-45deg, var(--tsv-error-color) 1%, var(--tsv-error-light-color) 100%) !important;
+    --tsv-button-warning-hover-bg: var(--tsv-error-light-color) !important;
+    --tsv-chat-mention-bg: rgb(37, 221, 133) !important;
+    --tsv-chat-self-bg-pending: #138b81 !important;
+    --tsv-client-commander-silent--gradient-start: #624b2f !important;
+    --tsv-client-commander-silent--gradient-stop: #3a2c1e !important;
+    --tsv-client-commander-silent--outline: #fb842e !important;
+    --tsv-client-commander-talking--gradient-start: #fb842e !important;
+    --tsv-client-commander-talking--gradient-stop: #b05b24 !important;
+    --tsv-client-commander-talking--outline: #fb842e !important;
+    --tsv-client-silent--gradient-start: rgb(54,82,105) !important;
+    --tsv-client-silent--gradient-stop: rgb(32,45,55) !important;
+    --tsv-client-silent--outline: var(--tsv-icon-tint) !important;
+    --tsv-client-talking--gradient-start: rgb(34,178,231) !important;
+    --tsv-client-talking--gradient-stop: rgb(23,122,158) !important;
+    --tsv-client-talking--outline: var(--tsv-icon-tint) !important;
+    --tsv-client-whisper-silent--gradient-start: #c42121 !important;
+    --tsv-client-whisper-silent--gradient-stop: #b45c5c !important;
+    --tsv-client-whisper-silent--outline: var(--tsv-error-color) !important;
+    --tsv-client-whisper-talking--gradient-start: rgb(255,130,130) !important;
+    --tsv-client-whisper-talking--gradient-stop: rgb(248,41,41) !important;
+    --tsv-client-whisper-talking--outline: var(--tsv-error-color) !important;
+    --tsv-connection-client-font-color: #B0C4DA !important;
+    --tsv-content-branding-bg: radial-gradient(circle, var(--tsv-font-subtitle-color) 0%, var(--tsv-bg) 100%) !important;
+    --tsv-content-branding-pinned-bg: radial-gradient(circle, rgba(184,87,55,1) 0%, rgba(55,88,187,1) 100%) !important;
+    --tsv-context-menu-border: none !important;
+    --tsv-context-menu-disabled-color: #9c9c9c !important;
+    --tsv-context-menu-error-color: var(--tsv-error-light-color) !important;
+    --tsv-context-menu-item-selection: rgba(28, 37, 56, 0.85) !important;
+    --tsv-contrast-bg: #131824 !important;
+    --tsv-contrast-color: #F5F6F6 !important;
+    --tsv-contrast-font-color: #000000 !important;
+    --tsv-contrast-strong-bg: #000000 !important;
+    --tsv-control-handle-bg: linear-gradient(to bottom, #393E40, #42484A) !important;
+    --tsv-disabled-color: #595959 !important;
+    --tsv-error-color: #F82929 !important;
+    --tsv-error-light-color: rgb(255, 130, 130) !important;
+    --tsv-font-color: #E0E0E0 !important;
+    --tsv-font-subtitle-color: #697A97 !important;
+    --tsv-footer-bg: var(--tsv-bg) !important;
+    --tsv-header-bg: linear-gradient(to bottom, #1C2538, #131824) !important;
+    --tsv-header-font-color: var(--tsv-font-color) !important;
+    --tsv-header-toolbar-bg: var(--tsv-bg) !important;
+    --tsv-highlight-header-font-color: var(--tsv-font-color) !important;
+    --tsv-icon-away: var(--tsv-away-color) !important;
+    --tsv-icon-base-contrast: var(--tsv-contrast-bg) !important;
+    --tsv-icon-base: var(--tsv-font-color) !important;
+    --tsv-icon-channel-bg: rgb(227,237,248) !important;
+    --tsv-icon-channel-shade1: rgb(206,224,242) !important;
+    --tsv-icon-channel-shade2: rgb(181,198,215) !important;
+    --tsv-icon-channel-shade3: rgb(226,236,247) !important;
+    --tsv-icon-error: var(--tsv-error-color) !important;
+    --tsv-icon-online: var(--tsv-online-color) !important;
+    --tsv-icon-shaded-bg: var(--tsv-shaded-bg) !important;
+    --tsv-icon-subtitle: var(--tsv-font-subtitle-color) !important;
+    --tsv-icon-tint: var(--tsv-tint) !important;
+    --tsv-item-accessory-color: #595959 !important;
+    --tsv-item-selection: var(--tsv-shaded-bg) !important;
+    --tsv-item-title-color: #E0E0E0 !important;
+    --tsv-online-color: #13F78D !important;
+    --tsv-scrollbar-bg: #0B111D !important;
+    --tsv-separation-border-color: #1D1F20 !important;
+    --tsv-separation-border-strong-color: var(--tsv-contrast-bg) !important;
+    --tsv-separation-border-strong: var(--tsv-separation-border-width) solid var(--tsv-separation-border-strong-color) !important;
+    --tsv-server-info-topic-bg: rgb(29, 31, 32, 0.6) !important;
+    --tsv-servertree-blur-tint: rgb(29, 31, 32, 0.3) !important;
+    --tsv-settings-bg: var(--tsv-header-bg) !important;
+    --tsv-shade: rgba(255, 255, 255, 0.05) !important;
+    --tsv-shaded-bar-bg: var(--tsv-bg) !important;
+    --tsv-shaded-bg: #1C2538 !important;
+    --tsv-shaded-footer-bg: var(--tsv-bg) !important;
+    --tsv-shaded-header-bg: var(--tsv-header-bg) !important;
+    --tsv-shaded-header-font-color: var(--tsv-font-color) !important;
+    --tsv-shaded-item-selection: var(--tsv-bg) !important;
+    --tsv-shadow-color: rgba(29, 31, 32, 0.4) !important;
+    --tsv-slider-track-bg: #131824 !important;
+    --tsv-slider-vad-color: #13F78D !important;
+    --tsv-tab-content: var(--tsv-shaded-bg) !important;
+    --tsv-tab-item-active:  linear-gradient(to bottom, var(--tsv-contrast-bg), var(--tsv-tab-content)) !important;
+    --tsv-tab-item-single-font-color: var(--tsv-font-subtitle-color) !important;
+    --tsv-toggle-bg: #0f121a !important;
+    --tsv-unrelated-activity-header-bg: linear-gradient(to top, #1C2538, var(--tsv-bg)) !important;
+    --tsv-unrelated-activity-header-controls-bg: var(--tsv-contrast-bg) !important;
+    --tsv-unrelated-activity-seperator-color: #1C2538 !important;
+    --tsv-window-color: var(--tsv-bg) !important;
+}
+
+.tsv-chat-dropzone-region {
+  background: inherit;
+}
+
+.tsv-resize-handle.tsv-resize-handle-left, .tsv-resize-handle.tsv-resize-handle-right {
+  top: calc(0px - var(--tsv-bar-height));
+}
+
+.tsv-resize-handle .tsv-resize-handle-grabber {
+  top: calc(50% - 30px - calc(var(--tsv-bar-height) / 2));
+}
+
+.tsv-resize-handle:before {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.tsv-highlight .tsv-title-bar {
+  --tsv-icon-base: inherit !important;
+  --tsv-icon-tint: inherit !important;
 }
 
 .tsv-icon-teamspeak-logo {
     display: none;
+}
+
+.ts-activity-slideover-container {
+  box-shadow: inherit !important;
+}
+
+.ts-activity-slideover-container.tsv-view::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0px;
+    background: linear-gradient(to right, transparent, rgb(.7, .7, .7));
+    left: -20px;
+    opacity: .25;
+    border-top-left-radius: 30px;
 }
 
 .ts-loading-view-content::after {
