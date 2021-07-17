@@ -1,7 +1,7 @@
 {
   "name": "CleanSpeak",
   "description": "Dark Theme by Gamer92000",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "identifier": "de.julianimhof.cleanspeak",
   "engines": {
     "teamspeak": 1
