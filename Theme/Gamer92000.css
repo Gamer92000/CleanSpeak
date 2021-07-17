@@ -177,16 +177,17 @@
   box-shadow: inherit !important;
 }
 
-.ts-activity-slideover-container.tsv-view::after {
+.ts-activity-slideover-container.tsv-view::before {
     content: "";
     position: absolute;
-    width: 20px;
+    width: 25px;
     height: 100%;
     top: 0px;
     background: linear-gradient(to right, transparent, rgb(.7, .7, .7));
     left: -20px;
-    opacity: .25;
-    border-top-left-radius: 30px;
+    opacity: .35;
+    border-top-left-radius: 4px;
+    pointer-events: none;
 }
 
 .ts-loading-view-content::after {
