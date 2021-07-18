@@ -52,6 +52,12 @@
         "image": "blue1.png"
       },
       {
+        "name": "​​​CleanSpeak DARKBLUE",
+        "source": "Dave.css",
+        "apiVersion": 1,
+        "image": "dave.png"
+      },
+      {
         "name": "​​​​CleanSpeak PURPLE",
         "source": "Purple.css",
         "apiVersion": 1,
