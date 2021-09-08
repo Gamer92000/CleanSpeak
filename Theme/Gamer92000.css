@@ -470,7 +470,7 @@
     --talking-color: var(--outline-color);
 }
 
-:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless, .tsv-icon-client-talking) {
+:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless, .tsv-icon-client-talking, .tsv-icon-client-detailed-normal, .tsv-icon-client-detailed-voiceless, .tsv-icon-client-detailed-talking) {
     --tsv-icon-tint: var(--outline-color) !important;
 }
 
