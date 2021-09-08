@@ -22,6 +22,7 @@
     --custom-color-chat-bubble-code: #141922;
     --custom-color-channel-commander-light: rgb(255, 205, 29);
     --custom-color-channel-commander-dark: #8d7007;
+    --custom-color-selection-background: hsla(var(--hue), var(--saturation), var(--lightness), .15);
 }
 
 :root { /* override everywhere (bad practice ) */
@@ -145,6 +146,7 @@
     --tsv-unrelated-activity-header-controls-bg: var(--tsv-contrast-bg) !important;
     --tsv-unrelated-activity-seperator-color: #1C2538 !important;
     --tsv-window-color: var(--tsv-bg) !important;
+    --tsv-shaded-bg-selection: var(--custom-color-selection-background) !important;
 }
 
 .tsv-chat-dropzone-region {
@@ -527,10 +529,6 @@ div.channel-commander ellipse {
     --tsv-bg: var(--custom-color-dark-grey);
 }
 
-.room-users-title {
-    top: 1px !important;
-}
-
 .ts-activity-slideover-container .ts-card {
     --tsv-shaded-bg: var(--custom-color-light-grey) !important;
 }
@@ -787,7 +785,7 @@ div.channel-commander ellipse {
 }
 
 .ts-chat-message-system-body {
-    --ts-chat-system-message-color: var(--custom-color-dark-grey);
+    --ts-chat-system-message-bg: var(--custom-color-dark-grey);
 }
 
 .ts-analytics-privacy-mode {
@@ -856,14 +854,10 @@ select option:checked {
 	border-top-right-radius: 5px !important;
 	border-bottom-right-radius: 5px !important;
 }
-.ts-slider-segment-value {
-    border-radius: 0px !important;
-}
 
 .ts-slider-segment-value.ts-slider-segment-value-off {
     background: var(--custom-color-light-grey) !important;
     transform: scale(1);
-    opacity: .8;
     border: 2px solid transparent;
 }
 
@@ -880,9 +874,65 @@ select option:checked {
 }
 
 .ts-server-tree-item-tag {
-     text-shadow: none;
+    text-shadow: none;
 }
 
 .ts-expander.collapsed:not(:hover) .ts-expander-chevron {
     --tsv-icon-base: rgb(105, 122, 151);
+}
+
+div.ts-appearance-settings div.ts-server-tree-item-root div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span {
+    color: transparent;
+    position: relative;
+}
+
+div.ts-appearance-settings div.ts-server-tree-item-root div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    color: var(--tsv-highlight-color);
+    position: absolute;
+    content: "JUL14N";
+    left: 0px;
+}
+
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(0) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "Hey mum!";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(1) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "Ich grüße meine Oma";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(2) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "LeonMarcelHD";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(3) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "SYOX";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(4) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "F4os";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(5) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "ImYoshii";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(6) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "Lysterion";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(7) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "T1mS22";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(8) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "Y4NN!K";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(9) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "ImScheinox";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(10) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "DODO.REH";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div:nth-child(11) div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "Harkaj33";
+}
+div.ts-appearance-settings div.vue-recycle-scroller__item-wrapper > div > div.self div.ts-server-tree-item-key.client > div.ts-server-tree-client-info > span > span::after {
+    content: "JUL14N aka Gamer92000" !important;
+}
+
+.tsv-central-toolbar-buttons::before {
+    background: initial;
 }

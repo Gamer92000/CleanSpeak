@@ -74,6 +74,12 @@
         "source": "Gamer.css",
         "apiVersion": 1,
         "image": "gamer1.png"
+      },
+      {
+        "name": "​​​​​​​Screech",
+        "source": "Screech.css",
+        "apiVersion": 1,
+        "image": "gamer1.png"
       }
 
     ]
