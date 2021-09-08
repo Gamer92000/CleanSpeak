@@ -1,0 +1,21 @@
+@import url(Gamer92000.css);
+
+@property --hue {
+  syntax: '<integer>'; /* <- defined as type number for the transition to work */
+  initial-value: 0;
+  inherits: false;
+}
+
+:root {
+	--hue: 0;
+  --saturation: 100%;
+  --lightness: 50%;
+	animation: color 20s infinite;
+}
+
+@keyframes color {
+  0% {--hue: 0;}
+  /*2% {--hue: 10;}*/
+  /*98% {--hue: 340;}*/
+  100% {--hue: 359;}
+}
