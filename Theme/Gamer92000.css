@@ -9,11 +9,14 @@
 :root { /* theme custom values */
     --lightness-dark: calc(var(--lightness) - 8%);
     --lightness-really-dark: calc(var(--lightness) - 30%);
+    --hue-inverse: calc(var(--hue) + 180);
     --custom-color-light-grey: #353844;
     --custom-color-dark-grey: #252A33;
     --custom-color-accent-light: hsl(var(--hue), var(--saturation), var(--lightness));
     --custom-color-accent-dark: hsl(var(--hue), var(--saturation), var(--lightness-dark));
     --custom-color-accent-really-dark: hsl(var(--hue), var(--saturation), var(--lightness-really-dark));
+    --custom-color-accent-inverse: hsl(var(--hue-inverse), var(--saturation), var(--lightness));
+    --custom-color-accent-inverse-really-dark: hsl(var(--hue-inverse), var(--saturation), var(--lightness-really-dark));
     --custom-color-off-white: #e0e0e0;
     --custom-color-secondary-text: #bebebe;
     --custom-value-scrollbar-width: 3px;
@@ -23,6 +26,9 @@
     --custom-color-channel-commander-light: rgb(255, 205, 29);
     --custom-color-channel-commander-dark: #8d7007;
     --custom-color-selection-background: hsla(var(--hue), var(--saturation), var(--lightness), .15);
+    --outline-color: var(--custom-color-accent-light);
+    --not-talking-color: var(--custom-color-accent-really-dark);
+    --talking-color: var(--outline-color);
 }
 
 :root { /* override everywhere (bad practice ) */
@@ -458,24 +464,22 @@
     stroke: var(--custom-color-accent-light) !important;
 }
 
-div:not(.channel-commander) > div > .tsv-icon-client-talking circle {
-    fill: var(--custom-color-accent-light) !important;
+.channel-commander {
+    --outline-color: var(--custom-color-accent-inverse);
+    --not-talking-color: var(--custom-color-accent-inverse-really-dark);
+    --talking-color: var(--outline-color);
 }
 
-div:not(.channel-commander) > div > .tsv-icon-client-normal circle, div:not(.channel-commander) > div > .tsv-icon-client-voiceless circle {
-    fill: var(--custom-color-accent-really-dark) !important;
+:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless, .tsv-icon-client-talking) {
+    --tsv-icon-tint: var(--outline-color) !important;
 }
 
-div.channel-commander > div > .tsv-icon-client-talking circle {
-    fill: var(--custom-color-channel-commander-light) !important;
-}
+:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless) circle {
+    fill: var(--not-talking-color) !important;
+} 
 
-div.channel-commander > div > :is(.tsv-icon-client-normal, .tsv-icon-client-voiceless) circle {
-    fill: var(--custom-color-channel-commander-dark) !important;
-}
-
-div.channel-commander ellipse {
-    --tsv-icon-tint: var(--custom-color-channel-commander-dark) !important;
+.tsv-icon-client-talking circle {
+    fill: var(--talking-color) !important;
 }
 
 .tsv-activity-detail .tsv-number-picker-button {
