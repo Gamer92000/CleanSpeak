@@ -6,7 +6,7 @@
   inherits: false;
 }
 
-:root {
+:root, ::after, ::before {
 	--cnt: 0;
 	--hue: calc(var(--cnt) * 10);
     --saturation: 100%;
