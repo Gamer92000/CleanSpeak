@@ -1,6 +1,6 @@
 @import url(Gamer92000.css);
 
-:root {
+:root, ::after, ::before {
     --hue: 300;
     --saturation: 100%;
     --lightness: 50%;

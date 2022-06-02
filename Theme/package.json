@@ -1,7 +1,7 @@
 {
   "name": "CleanSpeak",
   "description": "Dark Theme by Gamer92000",
-  "version": "1.0.2",
+  "version": "1.0.9",
   "identifier": "de.julianimhof.cleanspeak",
   "engines": {
     "teamspeak": 1
@@ -22,7 +22,7 @@
     "userTag": "Gamer92000@myteamspeak.com"
   },
   "community": {
-    "room": "#addons:tschat-1.teamspeak.com",
+    "room": "#extensions:chat.teamspeak.com",
     "server": "julianimhof.de"
   },
   "content": {

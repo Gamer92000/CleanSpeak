@@ -1,4 +1,4 @@
-:root { /* custom value*/
+:root, ::after, ::before { /* custom value*/
     /* accent color in hsl used to compute shades automatically */
     /* default: 36, 94%, 48% */
     --hue: 36;
@@ -6,7 +6,7 @@
     --lightness: 48%;
 }
 
-:root { /* theme custom values */
+:root, ::after, ::before { /* theme custom values */
     --lightness-dark: calc(var(--lightness) - 8%);
     --lightness-really-dark: calc(var(--lightness) - 30%);
     --hue-inverse: calc(var(--hue) + 180);
@@ -31,7 +31,7 @@
     --talking-color: var(--outline-color);
 }
 
-:root { /* override everywhere (bad practice ) */
+:root, ::after, ::before { /* override everywhere (bad practice ) */
     --tsv-icon-tint: var(--custom-color-accent-light) !important;
     --tsv-icon-tint2: var(--custom-color-accent-light) !important;
     --tsv-tint: var(--custom-color-accent-light) !important;
@@ -470,7 +470,7 @@
     --talking-color: var(--outline-color);
 }
 
-:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless, .tsv-icon-client-talking, .tsv-icon-client-detailed-normal, .tsv-icon-client-detailed-voiceless, .tsv-icon-client-detailed-talking) {
+:is(.tsv-icon-client-normal, .tsv-icon-client-voiceless, .tsv-icon-client-talking) {
     --tsv-icon-tint: var(--outline-color) !important;
 }
 
