@@ -6,7 +6,7 @@
   inherits: false;
 }
 
-:root {
+:root, ::after, ::before {
 	--hue: 0;
   --saturation: 100%;
   --lightness: 50%;

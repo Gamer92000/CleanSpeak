@@ -34,12 +34,6 @@
         "image": "default1.png"
       },
       {
-        "name": "CleanSpeak White",
-        "source": "White.css",
-        "apiVersion": 1,
-        "image": "white.png"
-      },
-      {
         "name": "​CleanSpeak RED",
         "source": "ImScheinox.css",
         "apiVersion": 1,
